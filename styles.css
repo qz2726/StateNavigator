@@ -1,0 +1,49 @@
+:root {
+    --TransparentBackground: #FFFFFF;
+    --PACIFIC: #F2672BFF;
+    --MOUNTAIN: #1FAB4AFF;
+    --CENTRAL: #F1C83EFF;
+    --EASTERN: #EE1B2EFF;
+    --ALASKA: #0098D4FF;
+    --HAWAII: #AA378CFF;
+    --Non-contiguous: #A9A9A9;
+    --Hover: #333333FF;
+
+}
+
+#us-map {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+path:hover:not(#NonContiguous) {
+    stroke-width: 0;
+    stroke-linejoin: round;
+    fill: var(--Hover) !important;
+    cursor: pointer;
+}
+
+#NonContiguous {
+    fill: none !important;
+    stroke: var(--Non-contiguous) !important;
+    cursor: default;
+}
+
+#info-box {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--TransparentBackground);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: "Helvetica Neue", serif;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+}
